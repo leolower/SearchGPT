@@ -1,0 +1,21 @@
+{
+  "manifest_version": 2,
+  "name": "SearchGPT",
+  "version": "1.0",
+  "description": "Automatically inputs the text parameter from the URL into the main input field and simulates pressing Enter.",
+  "permissions": [
+    "activeTab"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://chat.openai.com/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "icons": {
+    "48": "icon.png"
+  },
+  "browser_action": {
+    "default_icon": "icon.png"
+  }
+}
